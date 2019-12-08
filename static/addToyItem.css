@@ -1,0 +1,36 @@
+body {
+    background-color: whitesmoke;
+    ;
+}
+.addtoy {
+    color: white;
+    background-color: darkblue;
+    text-align: center;
+    font-size: 40px;
+}
+.title {
+    color: blue;
+    text-align: center;
+    font-size: 35px;
+    font-family: sans-serif;
+    padding: 20px;
+}
+.home {
+    text-align: center;
+    color: black;
+}
+.center {
+    border-radius: 15px;
+    text-decoration: none;
+    text-align: center; 
+    color: black; 
+    font-size: 25px;
+    border-right: 10px;
+    margin-left: 190px; 
+    margin-right: 190px;  
+}
+.price {
+    text-align: right;
+    width:50%; 
+    float: right;
+}

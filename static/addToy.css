@@ -1,0 +1,32 @@
+body {
+    background-color: whitesmoke;
+}
+.title {
+    color: blue;
+    text-align: center;
+    font-size: 35px;
+    font-family: sans-serif;
+    padding: 20px;;
+}
+.center {
+    text-align: center;
+    color: black;
+}
+.center {
+     border-radius: 15px;
+    text-decoration: none;
+    text-align: center; 
+    color: black; 
+    font-size: 16px;
+    border-right: 10px;
+    margin-left: 190px; 
+    margin-right: 190px;  
+}
+.price {
+    text-align: right;
+    width:50%; 
+    float: right;
+}
+h1,h2,h5 {
+    color:black
+}

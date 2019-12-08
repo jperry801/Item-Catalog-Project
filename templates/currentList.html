@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <head>
+            <link rel='stylesheet' href='/static/currentList.css'>
+            <meta charset="UTF-8">
+            <title>{{ ListofToys.name }} Inventory</title>
+        </head>
+            <span class="json"><h5><a href={{url_for('ListToyItemsJSON', toy_id = ListofToys.id) }}>JSON</a></h5></span>
+            
+            <div class="home"><a href='{{url_for('index') }}'>Homepage</a></div><br>
+                <div class="newitem"><a href={{url_for ('AddToyItem', toy_id = ListofToys.id) }}>Add New {{ ListofToys.name }} toy</a><br></div><br>
+                
+            <div class="flash">
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+        
+                    {% for message in messages %}
+                        <b>{{ message }}</b>
+                    {% endfor %}
+                    
+                    {% endif %}
+                {% endwith %}
+            </div>  
+
+            <div class="title">{{ ListofToys.name }}</div><br>
+
+                    {% for l in ListofInventory %}
+                        <div class="data">
+                            <div class="name">
+                                <h3><b>Name:</b></h3>
+                                    {{ l.name}}<br><br>
+                            </div>
+                            <div class="description">
+                                <h3><b>Description:</b></h3>
+                                    {{ l.description }}<br>
+                            </div>
+                            <div class="edit">
+                                <a href='{{url_for('EditToyItem', toy_id = ListofToys.id, inventory_id = l.id) }}'>Edit</a><br>
+                            </div>
+                            <div class="delete">
+                                <a href = '{{url_for('DeleteToyItem', toy_id = ListofToys.id, inventory_id = l.id) }}'>Delete</a><br>
+                            </div>
+                            <br>
+                        </div>
+                    {% endfor %}
+    </body>
+</html> 

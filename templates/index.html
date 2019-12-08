@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' href='/static/index.css'>
+        <meta charset="UTF-8">
+        <title>Item Catalog Project</title>
+    </head>
+    <body>
+        <span class="addtoy"><h5><a href='{{ url_for ('addToy') }}'>Add a Toy</a></h5></span>
+                <div class="title">Toybox Inventory</div>
+                    <div class="flash">
+                        {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+        
+                            {% for message in messages %}
+                                <b>{{ message }}</b> 
+                            {% endfor %}
+                    
+                            {% endif %}
+                        {% endwith %}
+                    </div>        
+
+                        <span class="currentitems"><h4>Current Items:</h4></span>
+
+                        {% for a in allToys %}
+                            <div class="data">
+                                <div class="toyname">
+                                    <a href={{url_for('ListToyItems', toy_id = a.id) }}>{{a.name}}
+                                </div>
+                                <div class="edit">
+                                    <h5><a href={{ url_for('editToy', toy_id = a.id) }}>Edit</a></h5>
+                                </div>
+                                <div class="delete">
+                                    <h5><a href={{url_for('deleteToy', toy_id = a.id) }}>Delete</a></h5>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+            <div class="login">
+                <button type="button"><a href='{{url_for('gdisconnect') }}'>Logout</a></button>
+            </div>
+    </body>
+</html>

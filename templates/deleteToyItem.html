@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <head>
+            <link rel='stylesheet' href='/static/deleteToyItem.css'>
+            <meta charset="UTF-8">
+            <title>{{d.description}} delete</title>
+        </head>
+            <div class="delete">Are you sure you want to delete {{d.description}}?<br></div><br>
+    
+        <div class="buttons">
+            <form action='{{url_for('DeleteToyItem', inventory_id = d.id, toy_id = delToyName.id) }}' method='POST'>
+                <input type="submit", value="Yes">
+            </form>
+            <form action '{{url_for('ListToyItems', toy_id = delToyName.id, inventory_id = d.id) }}'><br>
+                <button type="button"><a href='{{url_for('ListToyItems', toy_id = delToyName.id) }}'>No</a></button>
+            </form>
+        </div>
+    </body>
+</html>

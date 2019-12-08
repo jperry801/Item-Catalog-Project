@@ -1,0 +1,51 @@
+body {
+    background-color: whitesmoke;
+}
+.title {
+    color: white;
+    background-color: darkblue;
+    text-align: center;
+    font-size: 48px;
+    font-family: sans-serif;
+}
+.addtoy {
+    text-align: center;
+    color: black;
+}
+.login  {
+    text-align: center;
+    color:black;
+    font-size: 32px;
+}
+.flash {
+    text-align: center;
+    color:white;
+    background-color: darkgreen;
+}
+.data {
+    background-color: lightgrey;
+    text-align: left; 
+    color: black; 
+    font-size: 16px;
+    padding: 2px;
+    margin-top: 24px;
+}
+.toyname {
+    text-align: left;
+    font-size: 40px;
+    font-family: sans-serif;
+}
+.edit {
+    text-align: right;
+    font-family: sans-serif;
+}
+.delete {
+    text-align: right;
+    font-family: sans-serif;
+}
+.currentitems {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}

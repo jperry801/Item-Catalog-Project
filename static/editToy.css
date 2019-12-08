@@ -1,0 +1,32 @@
+body {
+    background-color: whitesmoke;
+}
+.title {
+    text-align: center;
+    color: white;
+    background-color: darkblue;
+    font-size: 40px;
+}
+.edittoy {
+    color: blue;
+    text-align: center;
+    font-size: 40px;
+}
+.center {
+    border-radius: 15px;
+    text-decoration: none;
+    text-align: center; 
+    color: black; 
+    font-size: 16px;
+    border-right: 10px;
+    margin-left: 190px; 
+    margin-right: 190px;  
+}
+.price {
+    text-align: right;
+    width:50%; 
+    float: right;
+}
+.home {
+    text-align: center;
+}

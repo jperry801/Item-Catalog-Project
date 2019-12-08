@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <head>
+            <link rel='stylesheet' href='/static/publicCurrentList.css'>
+            <meta charset="UTF-8">
+        </head>
+            <div class="flash">
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+        
+                            {% for message in messages %}
+                                <b>{{ message }}</b>
+                            {% endfor %}
+                    
+                        {% endif %}
+                    {% endwith %}
+                </div>  
+                <div class="title">{{ ListofToys.name }} current list:</div><br>
+                <div class="namefields">
+                        {% for l in ListofInventory %}
+                            <div class="section">
+                                <b><u>Name:</u></b><br>
+                                    {{ l.name }}<br><br>
+                                <b>Description:</b><br>
+                                    {{ l.description }}<br>
+                                <br>
+                            </div>
+                        {% endfor %}
+                </div>
+
+            <div class="json"><h5><a href={{url_for('ListToyItemsJSON', toy_id = ListofToys.id) }}>JSON</a></h5>
+                <a href='{{url_for('index') }}'>Homepage</a><br><br>
+            </div>
+    </body>
+</html> 

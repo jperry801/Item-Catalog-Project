@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' href='/static/editToy.css'>
+        <meta charset="UTF-8">
+        <title>Edit {{ editToyName.name }}</title>
+    </head>
+        <body>
+            <div class="title">Edit {{ editToyName.name }}</div>
+            
+                <div class="center">
+                    <form action='{{url_for('editToy', toy_id = editToyName.id) }}' method="POST">
+
+                        <b><p>Name:</p></b>
+                            <input type="text" size="30" name="name" placeholder="{{editToyName.name}}"><br><br>
+                            <input type='submit' value='Update'>
+                    </form><br>
+                </div>
+
+        <div class="home"><a href='{{url_for('index') }}'>Back to Inventory</a></div>
+    </body>
+</html>

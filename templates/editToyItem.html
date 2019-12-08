@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <head>
+            <link rel='stylesheet' href='/static/editToyItem.css'>
+            <meta charset="UTF-8">
+            <title>Edit {{editToyItem.name}} toy</title>
+        </head>
+        
+        <div class="edittoy">Edit {{editToyItem.name}}</div>
+
+
+        <div class="center">
+                <form action='{{url_for('EditToyItem', toy_id = editToyItem.id, inventory_id = e.id) }}' method='POST'>
+                    <b><p>Name:</p></b>
+                        <input type="text" size="30" name="name" placeholder="{{e.name}}"><br><br>
+                    <b><p>Description:</p></b>
+                        <input type="text" size="30" name="description" placeholder="{{e.description}}"><br><br>
+                        <input type='submit'value='Update'><br><br>
+                </form>
+                <div class="home"><a href='{{url_for('ListToyItems', toy_id = editToyItem.id, inventory_id = e.id) }}'>Return to List</a></div>
+        </div>
+            
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <head>
+            <link rel='stylesheet' href='/static/addToyItem.css'>
+            <meta charset="UTF-8">
+            <title>Add {{addToyNames.name}} toy</title>
+        </head>
+
+        <div class="center">
+                <div class="addtoy">Add New {{addToyNames.name}} Toy</div>
+               
+                <form action='{{url_for('AddToyItem', toy_id = addToyNames.id) }}' method="post">
+                        <b><p>Name:</b></p>
+                        <input type="text" size="30" name="name" placeholder='Name'>
+
+                        <b><p>Description:</b></p>
+                        <input type="text" size="30" name="description" placeholder='Description'><br><br>
+                        <input type="submit" value="Create"><br><br>
+                </form>
+            </div>
+        <div class="home"><a href='{{url_for('ListToyItems', toy_id = addToyNames.id) }}'>Return to List</a></div>
+    </body>
+</html>
